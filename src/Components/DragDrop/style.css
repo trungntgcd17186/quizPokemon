@@ -1,0 +1,29 @@
+.containerDrag {
+  display: flex;
+  width: 100%;
+}
+
+.hovered {
+  background-color: #333;
+  border-color: white;
+  border-style: dashed;
+}
+
+.empty1,
+.empty2,
+.empty3,
+.empty4,
+.empty5,
+.empty6 {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  border: solid 3px black;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+img {
+  height: 145px;
+  width: 145px;
+  cursor: pointer;
+}
