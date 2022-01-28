@@ -31,7 +31,6 @@ function DragDrop(props) {
           onDragStart={(e) => drag(e)}
           alt=""
         />
-        <p className="p1"></p>
       </div>
       <div
         className="empty2"

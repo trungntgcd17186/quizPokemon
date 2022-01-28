@@ -45,11 +45,6 @@ h1 {
   text-align: center;
 }
 
-.pokemon .img-container img {
-  max-width: 90%;
-  margin-top: 20px;
-}
-
 .pokemon .info {
   margin-top: 20px;
 }

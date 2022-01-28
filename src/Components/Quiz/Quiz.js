@@ -4,6 +4,7 @@ import { useState } from "react";
 import { quizData } from "./quizData";
 import Pokedex from "../../Components/Pokedex/Pokedex";
 import DragDrop from "../../Components/DragDrop/DragDrop";
+import $ from "jquery";
 
 function Quiz(props) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -64,28 +65,16 @@ function Quiz(props) {
     if (Number(message) === getRandomArray) {
       setScore(score + 1);
     }
-
     //Xử lý di chuyển hình pokemon về trạng thái ban đầu sau khi next câu hỏi.
-    const abc1 = document.getElementById(`${getArray[0]}`);
-    const abc2 = document.getElementById(`${getArray[1]}`);
-    const abc3 = document.getElementById(`${getArray[2]}`);
-    const abc4 = document.getElementById(`${getArray[3]}`);
-    const abc5 = document.getElementById(`${getArray[4]}`);
-    const abc6 = document.getElementById(`${getArray[5]}`);
+    $(".empty1").append($(`#${getArray[0]}`));
+    $(".empty2").append($(`#${getArray[1]}`));
+    $(".empty3").append($(`#${getArray[2]}`));
+    $(".empty4").append($(`#${getArray[3]}`));
+    $(".empty5").append($(`#${getArray[4]}`));
+    $(".empty6").append($(`#${getArray[5]}`));
 
-    const dragElement1 = document.querySelector(".empty1");
-    const dragElement2 = document.querySelector(".empty2");
-    const dragElement3 = document.querySelector(".empty3");
-    const dragElement4 = document.querySelector(".empty4");
-    const dragElement5 = document.querySelector(".empty5");
-    const dragElement6 = document.querySelector(".empty6");
-
-    dragElement1.appendChild(abc1);
-    dragElement2.appendChild(abc2);
-    dragElement3.appendChild(abc3);
-    dragElement4.appendChild(abc4);
-    dragElement5.appendChild(abc5);
-    dragElement6.appendChild(abc6);
+    //Cho phép drag trở lại sau khi next câu hỏi.
+    $("img").attr("draggable", "true");
   };
 
   //Reset trò chơi.

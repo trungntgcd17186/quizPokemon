@@ -2,11 +2,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./pokedexStyle.css";
 import axios from "axios";
+import $ from "jquery";
 
 function Pokemon(props) {
   const [datas, setDatas] = useState([]);
   const [type, setTypes] = useState([]);
 
+  // const [img, setImg] = useState();
   const [id, setId] = useState([]);
 
   useEffect(() => {
@@ -29,24 +31,20 @@ function Pokemon(props) {
     e.preventDefault();
   }
 
-  function drag(e) {
-    e.dataTransfer.setData("text", e.target.id);
-  }
-
   function drop(e) {
     e.preventDefault();
+
     var data = e.dataTransfer.getData("text");
+
     e.target.appendChild(document.getElementById(data));
 
     const sendData = () => {
       props.parentCallback(data);
-      console.log(data);
     };
     sendData();
+    $("img").attr("draggable", "false");
   }
 
-  //Xử lý truyền dữ liệu (id của pokemon nhận được sau khi người dùng drop)
-  //sang component Cha là Quiz.js
   return (
     <div>
       <div className="poke-container">
