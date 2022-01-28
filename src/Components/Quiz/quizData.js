@@ -1,18 +1,18 @@
 export const quizData = [
   {
     question:
-      "Question 1: Choose the correct pokemon with the information below",
+      "Question 1: Kéo hình pokemon xuống ô thông tin bên dưới để chọn đáp án đúng.",
   },
   {
     question:
-      "Question 2: Choose the correct pokemon with the information below",
+      "Question 2: Kéo hình pokemon xuống ô thông tin bên dưới để chọn đáp án đúng.",
   },
   {
     question:
-      "Question 3: Choose the correct pokemon with the information below",
+      "Question 3: Kéo hình pokemon xuống ô thông tin bên dưới để chọn đáp án đúng.",
   },
   {
     question:
-      "Question 4: Choose the correct pokemon with the information below",
+      "Question 4: Kéo hình pokemon xuống ô thông tin bên dưới để chọn đáp án đúng.",
   },
 ];
