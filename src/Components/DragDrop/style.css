@@ -16,8 +16,8 @@
 .empty5,
 .empty6 {
   height: 150px;
-  width: 150px;
-  margin: 10px;
+  width: 20%;
+  margin-left: 10px;
   border: solid 3px black;
   background: rgba(255, 255, 255, 0.6);
 }

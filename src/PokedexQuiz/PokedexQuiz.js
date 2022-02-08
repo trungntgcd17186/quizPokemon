@@ -1,9 +1,10 @@
 import React from "react";
 import Quiz from "../Components/Quiz/Quiz";
+import "./pokedex.css";
 
 function PokedexQuiz(props) {
   return (
-    <div className="">
+    <div className="main">
       <Quiz />
     </div>
   );
